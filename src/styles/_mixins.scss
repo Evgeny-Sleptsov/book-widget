@@ -1,0 +1,36 @@
+@mixin respond-to-max($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin respond-from-min($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin height-to-max($media) {
+  @media only screen and (max-height: $media) {
+    @content;
+  }
+}
+
+@mixin height-from-min($media) {
+  @media only screen and (min-height: $media) {
+    @content;
+  }
+}
+
+
+@mixin hoverDesktop() {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin hoverMobile() {
+  @media (hover: none), (hover: hover) and (pointer: coarse) {
+    @content;
+  }
+}
